@@ -29,16 +29,20 @@ scissors = '''
 
 #Write your code below this line 👇
 
+game_images = [rock, paper, scissors]
+
 user_choice = int(
   input(
     "Lets play! Choose 0 for Rock, 1 for Paper or 2 Scissors to start.\n "))
+5
 
 computer_choice = random.randint(0, 2)
 
-print(f"Computer chose {computer_choice}")
+print("Computer chose:")
+print(game_images[computer_choice])
 
-if user_choice >= 3 or user_choice < 0:
-  print("You typed an invalid number, you lose!")
+if user_choice >= len(game_images) or user_choice < 0:
+  print("Invalid input. Please choose a number between 0 and", len(game_images) - 1)
 elif user_choice == 0 and computer_choice == 1:
   print("You win!")
 elif computer_choice == 0 and user_choice == 2:
