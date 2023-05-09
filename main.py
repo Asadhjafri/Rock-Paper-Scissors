@@ -42,7 +42,8 @@ print("Computer chose:")
 print(game_images[computer_choice])
 
 if user_choice >= len(game_images) or user_choice < 0:
-  print("Invalid input. Please choose a number between 0 and", len(game_images) - 1)
+  print("Invalid input. Please choose a number between 0 and",
+        len(game_images) - 1)
 elif user_choice == 0 and computer_choice == 1:
   print("You win!")
 elif computer_choice == 0 and user_choice == 2:
